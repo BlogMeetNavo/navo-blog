@@ -1,0 +1,13 @@
+{
+  "name": "navo-blog",
+  "version": "1.0.0",
+  "description": "NAVO Blog",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-rss": "^1.2.0"
+  }
+}
