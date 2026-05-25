@@ -69,9 +69,9 @@ ogtype: article
 <div class="article-wrap">
   <div class="article-inner">
     <a href="/" class="back-link">← Back to all posts</a>
-    {% if tags %}
-    <span class="post-tag">{{ tags | first }}</span>
-    {% endif %}
+{% if tags %}
+<span class="post-tag">{{ tags | first }}</span>
+{% endif %}
     <h1 class="post-title">{{ title }}</h1>
     <div class="post-meta">By <strong>{{ author | default: "Belinda" }}</strong> &nbsp;·&nbsp; {{ date | dateDisplay }} &nbsp;·&nbsp; {{ content | readTime }}</div>
     {% if image %}
