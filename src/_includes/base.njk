@@ -49,6 +49,14 @@ body {
 .nav-inner { max-width: var(--max-w); margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; }
 .nav-logo { text-decoration: none; display: flex; align-items: center; }
 .nav-logo img { height: 24px; width: auto; display: block; }
+.nav-logo,
+.nav-logo:visited,
+.footer-logo,
+.footer-logo:visited {
+  color: var(--white);
+  text-decoration: none;
+}
+
 .nav-logo em,
 .footer-logo em {
   color: var(--salmon);
@@ -59,7 +67,8 @@ body {
 .footer-logo sup {
   font-size: 0.45em;
   vertical-align: super;
-  opacity: 0.55;
+  opacity: 0.6;
+  color: var(--white);
 }
 .nav-links { display: flex; align-items: center; list-style: none; }
 .nav-links a { display: block; padding: 0.38rem 0.88rem; font-size: 0.8rem; font-weight: 500; color: var(--w50); text-decoration: none; border-radius: 999px; transition: color 0.2s; }
