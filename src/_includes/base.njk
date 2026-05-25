@@ -79,4 +79,99 @@ body {
 .nav-links .ncta a:hover { background: var(--salmon-h); }
 .burger {
   display: none; flex-direction: column; gap: 5px;
-  background: none; border: none; cursor: pointer; padding:
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.burger span {
+  display: block; width: 22px; height: 1.5px;
+  background: var(--white); border-radius: 2px; transition: all 0.28s;
+}
+.burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.mob-nav {
+  display: none; position: fixed;
+  top: var(--nav-h); left: 0; right: 0;
+  background: var(--navy-mid);
+  border-bottom: 1px solid var(--w08);
+  z-index: 399; padding: 1.25rem 2rem 1.75rem;
+}
+.mob-nav.open { display: block; }
+.mob-nav ul { list-style: none; }
+.mob-nav ul li a {
+  display: block; padding: 0.75rem 0;
+  color: var(--text); text-decoration: none;
+  font-size: 0.98rem; font-weight: 500;
+  border-bottom: 1px solid var(--w08); transition: color 0.2s;
+}
+.mob-nav ul li:last-child a { border: none; color: var(--salmon); font-weight: 600; }
+.mob-nav ul li a:hover { color: var(--white); }
+footer {
+  background: var(--navy-mid);
+  border-top: 1px solid var(--w08);
+  padding: 2.25rem 2rem;
+}
+.footer-inner {
+  max-width: var(--max-w); margin: 0 auto;
+  display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 1.25rem;
+}
+.footer-l { display: flex; flex-direction: column; gap: 0.35rem; }
+.footer-logo img { height: 22px; width: auto; display: block; }
+.footer-loc { font-size: 0.72rem; color: var(--muted); }
+.footer-r { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.footer-r a { font-size: 0.72rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-r a:hover { color: var(--white); }
+.footer-sep { color: var(--w15); }
+.rh-wrap { display: inline-flex; align-items: center; gap: 0.4rem; text-decoration: none; }
+.rh-wrap span { font-size: 0.72rem; color: var(--muted); }
+.rh-wrap:hover span { color: var(--white); }
+.btn {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.875rem; font-weight: 600;
+  padding: 0.82rem 1.75rem; border-radius: 999px;
+  border: none; cursor: pointer; text-decoration: none;
+  transition: all 0.2s; white-space: nowrap;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-s { background: var(--salmon); color: var(--white); }
+.btn-s:hover { background: var(--salmon-h); }
+.btn-gw {
+  background: transparent; color: var(--w50);
+  border: 1px solid var(--w15);
+}
+.btn-gw:hover { color: var(--white); border-color: var(--w50); }
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+  .burger { display: flex; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="https://meetnavo.com" class="nav-logo">
+      <img src="/assets/navo-logo.png" alt="NAVO">
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://meetnavo.com" target="_blank" rel="noopener">Meet NAVO.</a></li>
+      <li class="active"><a href="https://blog.meetnavo.com" target="_blank" rel="noopener">Blog.</a></li>
+      <li><a href="https://shop.meetnavo.com" target="_blank" rel="noopener">Guides.</a></li>
+      <li><a href="https://meetnavo.com/real-conversations" target="_blank" rel="noopener">Real Conversations.</a></li>
+      <li><a href="https://app.meetnavo.com" target="_blank" rel="noopener">Get Started.</a></li>
+      <li class="ncta"><a href="https://tally.so/r/rjrdpo" target="_blank" rel="noopener">Stay Connected.</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mob-nav" id="mobNav">
+  <ul>
+    <li><a href="https://meetnavo.com" target="_blank" rel="noopener">Meet NAVO.</a></li>
+    <li><a href="https://blog.meetnavo.com" target="_blank" rel="noopener">Blog.</a></li>
+    <li><a href="https://shop.meetnavo.com" target="_blank" rel="noopener">Guides.</a></li>
+    <li><a href="https://meetnavo.com/real-conversations" target="_blank" rel="noopener">Real Conve
