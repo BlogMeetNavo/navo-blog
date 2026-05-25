@@ -6,6 +6,7 @@ description: When my dad died and my mum's health began to decline, I realised
   how much I didn't know – and how little of it was written down anywhere. This
   is what I wish someone had told me sooner.
 image: /images/uploads/1-i-didn-t-know-where-to-start..png
+layout: post.njk
 tags:
   - posts
   - getting started
