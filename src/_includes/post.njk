@@ -20,12 +20,14 @@ ogtype: article
   color: var(--salmon);
   text-decoration: none;
   font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .post-cover {
   width: 100%;
   border-radius: 18px;
   margin-bottom: 2rem;
+  box-shadow: 0 20px 60px rgba(14,26,43,0.10);
 }
 
 .post-title {
@@ -33,6 +35,7 @@ ogtype: article
   line-height: 1.1;
   margin-bottom: 1rem;
   color: var(--ink);
+  letter-spacing: -0.03em;
 }
 
 .post-meta {
@@ -42,21 +45,78 @@ ogtype: article
 }
 
 .post-body {
-  font-size: 1.08rem;
+  font-size: 1rem;
   line-height: 1.85;
-  color: rgba(14,26,43,.8);
+  color: rgba(14,26,43,.78);
 }
 
 .post-body p {
   margin-bottom: 1.5rem;
 }
 
+.post-body strong {
+  color: var(--ink);
+}
+
+.post-body h2,
+.post-body h3 {
+  color: var(--ink);
+  margin: 2.5rem 0 1rem;
+  line-height: 1.25;
+}
+
+.post-body a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.post-note {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(14,26,43,0.12);
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: rgba(14,26,43,0.55);
+}
+
+.post-note p {
+  margin-bottom: 0.8rem;
+}
+
+.post-note a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .post-cta {
-  margin-top: 4rem;
+  margin-top: 3rem;
   background: var(--navy);
   color: white;
   padding: 2rem;
   border-radius: 18px;
+}
+
+.post-cta h3 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.post-cta p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: rgba(255,255,255,.82);
+}
+
+.post-cta a {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 500;
 }
 </style>
 
@@ -79,10 +139,21 @@ ogtype: article
       {{ content | safe }}
     </div>
 
+    <div class="post-note">
+      <p>
+        If you’d like to read more about what led Belinda to build NAVO, you can visit
+        <a href="https://belindascott.co" target="_blank" rel="noopener">belindascott.co</a>.
+      </p>
+
+      <p>
+        NAVO blog articles are based on personal experience and general information only. They are not legal, medical, financial or aged care advice. Please speak with a qualified lawyer, medical practitioner, financial adviser or relevant care professional about your own situation.
+      </p>
+    </div>
+
     <div class="post-cta">
       <h3>Not sure where to start?</h3>
       <p>Take the free 15-minute check-in and see what you know, what’s missing, and where to begin.</p>
-      <a href="https://tally.so/r/gDN0BP" target="_blank">Start the free check-in →</a>
+      <a href="https://tally.so/r/gDN0BP" target="_blank" rel="noopener">Start the free check-in →</a>
     </div>
 
   </article>
