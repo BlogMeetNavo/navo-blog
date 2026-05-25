@@ -70,5 +70,3 @@ Or if you're ready to just get something down on paper, the ["Everything in One
 Either way – you've already taken the hardest step. You started.
 
 *\- Belinda, Founder of NAVO*
-
-*If you'd like to read more about what led me to build NAVO, you can find my full story at [belindascott.co ](https://www.belindascott.co/blogs)*
