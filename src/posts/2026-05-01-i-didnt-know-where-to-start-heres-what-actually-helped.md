@@ -7,6 +7,7 @@ description: When my dad died and my mum's health began to decline, I realised
   is what I wish someone had told me sooner.
 image: /images/uploads/1-i-didn-t-know-where-to-start..png
 tags:
+  - posts
   - getting started
   - family
   - founder story
