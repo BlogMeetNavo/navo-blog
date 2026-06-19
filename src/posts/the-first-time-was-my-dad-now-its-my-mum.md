@@ -9,6 +9,7 @@ description: After everything with my dad, I thought I understood how broken the
   a hospital bed that had nothing to do with how badly she was hurt.
 image: /images/uploads/blog_video_ep6.png
 tags:
+  - Real Conversations
   - ageing parents
   - ageing alone
   - emergency alert systems
@@ -54,3 +55,5 @@ None of this prevents a fall. But knowing these things in advance changes what h
 I know my story isn't unique. And that's exactly why we're doing this.
 
 – Belinda Scott, Founder of NAVO
+
+[NEXT](https://blog.meetnavo.com/posts/discharged-but-not-done/)  |  [PREVIOUS](https://blog.meetnavo.com/posts/morally-wrong-legally-fine/)
