@@ -1,5 +1,5 @@
 ---
-title: Trying to get answers – what really happened that night?
+title: 4. Trying to get answers – what really happened that night?
 slug: trying-to-get-answers
 date: 2026-06-19T15:17:00.000+10:00
 author: Belinda
