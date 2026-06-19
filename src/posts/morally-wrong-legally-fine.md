@@ -1,5 +1,5 @@
 ---
-title: Morally Wrong. Legally Fine. Why there was no case
+title: Morally wrong. Legally fine. Why there was no case
 slug: morally-wrong-legally-fine
 date: 2026-06-19T15:28:00.000+10:00
 author: Belinda
