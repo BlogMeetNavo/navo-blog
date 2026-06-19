@@ -8,6 +8,7 @@ description: Looking after the people we love was never supposed to feel like
   more than a podcast.
 image: /images/uploads/blog_video_ep1.png
 tags:
+  - Real Conversations
   - ageing parents
   - caregiving
   - family carer
@@ -33,3 +34,5 @@ None of it exists because I had this figured out. It exists because I didn't, an
 I know my story isn't unique. And that's exactly why we're doing this.
 
 *– Belinda Scott, Founder of NAVO*
+
+[NEXT](https://blog.meetnavo.com/posts/the-week-everything-changed/)
