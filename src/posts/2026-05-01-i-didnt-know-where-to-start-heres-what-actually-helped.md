@@ -1,12 +1,14 @@
 ---
+cta_type: checklist
+layout: post.njk
 title: I didn't know where to start. Here's what actually helped.
+slug: I-didn't-know-where-to-start
 date: 2026-05-11T18:21:00.000+10:00
 author: Belinda
 description: When my dad died and my mum's health began to decline, I realised
   how much I didn't know – and how little of it was written down anywhere. This
   is what I wish someone had told me sooner.
 image: /images/uploads/1-i-didn-t-know-where-to-start..png
-layout: post.njk
 tags:
   - posts
   - getting started
@@ -68,4 +70,4 @@ Or if you're ready to just get something down on paper, the ["Everything in One 
 
 Either way – you've already taken the hardest step. You started.
 
-*– Belinda, Founder of NAVO*
+*– Belinda Scott, Founder of NAVO*
