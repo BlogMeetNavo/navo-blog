@@ -6,6 +6,7 @@ author: Belinda
 description: I took my questions to lawyers, not for money, but to understand
   how something could feel so wrong and still sit inside the rules. Here's what
   I learned about how medical negligence actually works.
+image: /images/uploads/blog_video_ep5.png
 tags:
   - ageing parents
   - medical negligence
