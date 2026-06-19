@@ -8,7 +8,7 @@ description: I took my questions to lawyers, not for money, but to understand
   I learned about how medical negligence actually works.
 image: /images/uploads/blog_video_ep5.png
 tags:
-  - Real Conversations
+  - 4 Real Conversations
   - ageing parents
   - medical negligence
   - patient safety
