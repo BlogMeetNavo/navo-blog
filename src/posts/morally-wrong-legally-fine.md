@@ -8,6 +8,7 @@ description: I took my questions to lawyers, not for money, but to understand
   I learned about how medical negligence actually works.
 image: /images/uploads/blog_video_ep5.png
 tags:
+  - Real Conversations
   - ageing parents
   - medical negligence
   - patient safety
@@ -54,3 +55,5 @@ That conversation is where something shifted for me. If the system wasn't going 
 I know my story isn't unique. And that's exactly why we're doing this.
 
 – Belinda Scott, Founder of NAVO
+
+[NEXT](https://blog.meetnavo.com/posts/the-first-time-was-my-dad-now-its-my-mum/)  |  [PREVIOUS](https://blog.meetnavo.com/posts/trying-to-get-answers/)
