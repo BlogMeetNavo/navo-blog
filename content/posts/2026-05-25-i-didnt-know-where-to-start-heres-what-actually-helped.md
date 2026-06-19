@@ -1,6 +1,6 @@
 ---
 title: I didn't know where to start. Here's what actually helped.
-date: 2026-05-25T15:21:00.000+10:00
+date: 2026-06-19T12:06:00.000+10:00
 author: Belinda
 description: When my dad died and my mum's health began to decline, I realised
   how much I didn't know – and how little of it was written down anywhere. This
@@ -14,6 +14,7 @@ tags:
   - emotional
   - aged care
   - ageing parents
+cta_type: checklist
 ---
 I'll be honest with you.
 
