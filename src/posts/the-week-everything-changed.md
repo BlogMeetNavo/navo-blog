@@ -1,6 +1,5 @@
 ---
-layout: post.njk
-title: The week everything changed | When my dad fell
+title: The week everything changed – when my dad fell
 slug: the-week-everything-changed
 date: 2026-06-19T14:39:00.000+10:00
 author: Belinda
@@ -16,6 +15,7 @@ tags:
   - posts
 cta_type: video
 cta_link: https://listen.meetnavo.com?v=2-the-week-everything-changed
+layout: post.njk
 ---
 A couple of years ago, my life looked completely different.
 
