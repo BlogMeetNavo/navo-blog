@@ -1,4 +1,5 @@
 ---
+layout: post.njk
 title: The week everything changed | When my dad fell
 slug: the-week-everything-changed
 date: 2026-06-19T14:39:00.000+10:00
