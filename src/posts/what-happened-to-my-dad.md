@@ -8,6 +8,7 @@ description: My dad went into hospital for observation after a fall. He never
   the systems and structures around them that failed when it mattered most.
 image: /images/uploads/blog_video_ep3.png
 tags:
+  - Real Conversations
   - ageing parents
   - hospital care
   - patient safety
@@ -52,3 +53,5 @@ None of this guarantees anything. It didn't for us. But you noticing, and saying
 I know my story isn't unique. And that's exactly why we're doing this.
 
 – Belinda Scott, Founder of NAVO
+
+[NEXT](https://blog.meetnavo.com/posts/trying-to-get-answers/)  |  [PREVIOUS](https://blog.meetnavo.com/posts/the-week-everything-changed/)
