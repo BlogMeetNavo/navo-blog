@@ -141,20 +141,35 @@ ogtype: article
 
     <div class="post-note">
       <p>
-        If you’d like to read more about what led Belinda to build NAVO, you can visit
-        <a href="https://belindascott.co" target="_blank" rel="noopener">belindascott.co</a>.
-      </p>
-
-      <p>
-        NAVO blog articles are based on personal experience and general information only. They are not legal, medical, financial or aged care advice. Please speak with a qualified lawyer, medical practitioner, financial adviser or relevant care professional about your own situation.
+        This article reflects {{ author }}'s personal experience and is based on the Australian healthcare, legal and aged care systems. If you're reading this from outside Australia, the feelings and experience are often universal, even where the systems, services and laws are not. This is not legal, medical, financial or aged care advice, please speak with a qualified professional about your own situation.
       </p>
     </div>
 
+    {% if cta_type == "video" %}
+    <div class="post-cta">
+      <h3>Hear it in her own words</h3>
+      <p>This story is also one of the episodes in Real Conversations, NAVO's series on care and ageing.</p>
+      <a href="{{ cta_link }}" target="_blank" rel="noopener">Listen to the full episode →</a>
+    </div>
+    {% elif cta_type == "checklist" %}
+    <div class="post-cta">
+      <h3>Want this written down properly?</h3>
+      <p>We've turned this into a printable guide you can walk through with your family.</p>
+      <a href="{{ cta_link }}" target="_blank" rel="noopener">Get the checklist →</a>
+    </div>
+    {% elif cta_type == "app" %}
+    <div class="post-cta">
+      <h3>NAVO, the app</h3>
+      <p>Everything in this post, and more, in one place built for exactly this.</p>
+      <a href="{{ cta_link }}" target="_blank" rel="noopener">See how it works →</a>
+    </div>
+    {% elif cta_type == "check-in" %}
     <div class="post-cta">
       <h3>Not sure where to start?</h3>
-      <p>Take the free 15-minute check-in and see what you know, what’s missing, and where to begin.</p>
+      <p>Take the free 15-minute check-in and see what you know, what's missing, and where to begin.</p>
       <a href="https://tally.so/r/gDN0BP" target="_blank" rel="noopener">Start the free check-in →</a>
     </div>
+    {% endif %}
 
   </article>
 </main>
