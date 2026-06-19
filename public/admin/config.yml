@@ -10,7 +10,7 @@ collections:
     label: Blog Posts
     folder: content/posts
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Publish Date, name: date, widget: datetime }
@@ -19,3 +19,5 @@ collections:
       - { label: Featured Image, name: image, widget: image, required: false }
       - { label: Body, name: body, widget: markdown }
       - { label: Tags, name: tags, widget: list, required: false }
+      - { label: "CTA Type", name: cta_type, widget: select, options: ["check-in", "video", "checklist", "app", "none"], default: "check-in" }
+      - { label: "CTA Link", name: cta_link, widget: string, required: false }
