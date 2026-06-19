@@ -2,7 +2,7 @@
 cta_type: checklist
 layout: post.njk
 title: I didn't know where to start. Here's what actually helped.
-slug: I-didn't-know-where-to-start
+slug: I-didnt-know-where-to-start
 date: 2026-05-11T18:21:00.000+10:00
 author: Belinda
 description: When my dad died and my mum's health began to decline, I realised
