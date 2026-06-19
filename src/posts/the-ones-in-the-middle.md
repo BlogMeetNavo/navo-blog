@@ -1,5 +1,5 @@
 ---
-title: The ones in the middle – the sandwich generation
+title: 8. The ones in the middle – the sandwich generation
 slug: the-ones-in-the-middle
 date: 2026-06-19T16:15:00.000+10:00
 author: Belinda
@@ -8,7 +8,7 @@ description: There's a name for the people trying to hold up ageing parents,
   yourself last, including from my own heart.
 image: /images/uploads/blog_video_ep8.png
 tags:
-  - 1 Real Conversations
+  - Real Conversations
   - ageing parents
   - sandwich generation
   - caregiver health
