@@ -8,6 +8,7 @@ description: Care doesn't end at discharge, but the system often acts like it
   warns you about the medications that follow.
 image: /images/uploads/blog_video_ep7.png
 tags:
+  - Real Conversations
   - ageing parents
   - hospital discharge
   - family carer
@@ -58,3 +59,5 @@ None of this fixes the gap between hospital and home. But knowing it exists, bef
 I know my story isn't unique. And that's exactly why we're doing this.
 
 – Belinda Scott, Founder of NAVO
+
+[NEXT](https://blog.meetnavo.com/posts/the-ones-in-the-middle/)  |  [PREVIOUS](https://blog.meetnavo.com/posts/the-first-time-was-my-dad-now-its-my-mum/)
