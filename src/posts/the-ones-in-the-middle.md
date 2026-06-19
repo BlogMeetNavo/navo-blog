@@ -8,7 +8,8 @@ description: There's a name for the people trying to hold up ageing parents,
   yourself last, including from my own heart.
 image: /images/uploads/blog_video_ep8.png
 tags:
-  - geing parents
+  - Real Conversations
+  - ageing parents
   - sandwich generation
   - caregiver health
   - family carer
@@ -50,3 +51,5 @@ And if you recognise yourself in any of this, the constant organising, the quiet
 I know my story isn't unique. And that's exactly why we're doing this.
 
 – Belinda Scott, Founder of NAVO
+
+NEXT>     [<PREVIOUS ](https://blog.meetnavo.com/posts/discharged-but-not-done/)
