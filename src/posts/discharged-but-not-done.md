@@ -8,7 +8,7 @@ description: Care doesn't end at discharge, but the system often acts like it
   warns you about the medications that follow.
 image: /images/uploads/blog_video_ep7.png
 tags:
-  - Real Conversations
+  - 2 Real Conversations
   - ageing parents
   - hospital discharge
   - family carer
