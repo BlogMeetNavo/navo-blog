@@ -1,5 +1,5 @@
 ---
-title: Discharged. But not done. What happens after hospital
+title: 7. Discharged. But not done. What happens after hospital
 slug: discharged-but-not-done
 date: 2026-06-19T15:54:00.000+10:00
 author: Belinda
@@ -8,7 +8,7 @@ description: Care doesn't end at discharge, but the system often acts like it
   warns you about the medications that follow.
 image: /images/uploads/blog_video_ep7.png
 tags:
-  - 2 Real Conversations
+  - Real Conversations
   - ageing parents
   - hospital discharge
   - family carer
