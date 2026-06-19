@@ -8,6 +8,7 @@ description: After my dad died, I couldn't just accept it and move on. This is
   position to know before they start.
 image: /images/uploads/blog_video_ep4.png
 tags:
+  - Real Conversations
   - ageing parents
   - patient safety
   - medical records
@@ -52,3 +53,5 @@ And give yourself permission to decide how far you take it. Wanting answers does
 I know my story isn't unique. And that's exactly why we're doing this.
 
 – Belinda Scott, Founder of NAVO
+
+[NEXT](https://blog.meetnavo.com/posts/morally-wrong-legally-fine/)  |  [PREVIOUS](https://blog.meetnavo.com/posts/what-happened-to-my-dad/)
