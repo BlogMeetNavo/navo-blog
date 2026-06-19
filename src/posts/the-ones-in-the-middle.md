@@ -52,4 +52,4 @@ I know my story isn't unique. And that's exactly why we're doing this.
 
 – Belinda Scott, Founder of NAVO
 
-NEXT>     [<PREVIOUS ](https://blog.meetnavo.com/posts/discharged-but-not-done/)
+NEXT  |  [PREVIOUS ](https://blog.meetnavo.com/posts/discharged-but-not-done/)
