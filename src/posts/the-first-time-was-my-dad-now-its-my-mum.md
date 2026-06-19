@@ -1,5 +1,5 @@
 ---
-title: The first time was my dad. Now it's my mum.
+title: 6. The first time was my dad. Now it's my mum.
 slug: the-first-time-was-my-dad-now-its-my-mum
 date: 2026-06-19T15:44:00.000+10:00
 author: Belinda
@@ -9,7 +9,7 @@ description: After everything with my dad, I thought I understood how broken the
   a hospital bed that had nothing to do with how badly she was hurt.
 image: /images/uploads/blog_video_ep6.png
 tags:
-  - 3 Real Conversations
+  - Real Conversations
   - ageing parents
   - ageing alone
   - emergency alert systems
