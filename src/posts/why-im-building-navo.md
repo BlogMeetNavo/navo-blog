@@ -1,5 +1,5 @@
 ---
-title: It wasn't supposed to be like this – why I'm building NAVO
+title: 1. It wasn't supposed to be like this – why I'm building NAVO
 slug: why-im-building-navo
 date: 2026-06-19T10:21:00.000+10:00
 author: Belinda
@@ -8,7 +8,7 @@ description: Looking after the people we love was never supposed to feel like
   more than a podcast.
 image: /images/uploads/blog_video_ep1.png
 tags:
-  - 1 Real Conversations
+  - Real Conversations
   - ageing parents
   - caregiving
   - family carer
