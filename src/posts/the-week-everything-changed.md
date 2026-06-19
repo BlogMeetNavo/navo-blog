@@ -1,5 +1,5 @@
 ---
-title: The week everything changed – when my dad fell
+title: 2. The week everything changed – when my dad fell
 slug: the-week-everything-changed
 date: 2026-06-19T14:39:00.000+10:00
 author: Belinda
@@ -7,7 +7,7 @@ description: A couple of years ago, my life looked completely different. Then my
   dad had a fall, and everything changed, with no map for what came next.
 image: /images/uploads/blog_video_ep2.png
 tags:
-  - 2 Real Conversations
+  - Real Conversations
   - ageing parents
   - caregiving
   - family carer
