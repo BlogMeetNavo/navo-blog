@@ -1,4 +1,4 @@
-module.exports = function(eleventyConfig) {
+module.exports = function(eventyConfig) {
   eleventyConfig.addPassthroughCopy("src/admin");
   eleventyConfig.addPassthroughCopy("src/images");
 
@@ -12,6 +12,10 @@ module.exports = function(eleventyConfig) {
     const words = content.split(" ").length;
     const minutes = Math.ceil(words / 200);
     return minutes + " min read";
+  });
+
+  eleventyConfig.addCollection("posts", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/posts/*.md");
   });
 
   return {
