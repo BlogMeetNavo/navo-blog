@@ -1,5 +1,5 @@
 ---
-title: Morally wrong. Legally fine. Why there was no case
+title: 5. Morally wrong. Legally fine. Why there was no case
 slug: morally-wrong-legally-fine
 date: 2026-06-19T15:28:00.000+10:00
 author: Belinda
@@ -8,7 +8,7 @@ description: I took my questions to lawyers, not for money, but to understand
   I learned about how medical negligence actually works.
 image: /images/uploads/blog_video_ep5.png
 tags:
-  - 4 Real Conversations
+  - Real Conversations
   - ageing parents
   - medical negligence
   - patient safety
