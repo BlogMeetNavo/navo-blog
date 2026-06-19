@@ -7,6 +7,7 @@ description: A couple of years ago, my life looked completely different. Then my
   dad had a fall, and everything changed, with no map for what came next.
 image: /images/uploads/blog_video_ep2.png
 tags:
+  - Real Conversations
   - ageing parents
   - caregiving
   - family carer
@@ -30,3 +31,5 @@ And I realised very quickly this wasn't just about my dad. It was about somethin
 I know my story isn't unique. And that's exactly why we're doing this.
 
 – Belinda Scott, Founder of NAVO
+
+[NEXT](https://blog.meetnavo.com/posts/what-happened-to-my-dad/)  |  [PREVIOUS](https://blog.meetnavo.com/posts/why-im-building-navo/)
