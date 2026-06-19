@@ -1,6 +1,5 @@
 ---
-layout: post.njk
-title: It wasn't supposed to be like this | Why I'm building NAVO
+title: It wasn't supposed to be like this – why I'm building NAVO
 slug: why-im-building-navo
 date: 2026-06-19T13:22:00.000+10:00
 author: Belinda
@@ -17,6 +16,7 @@ tags:
   - posts
 cta_type: video
 cta_link: https://listen.meetnavo.com?v=1-it-wasn-t-supposed-to-be-like-this
+layout: post.njk
 ---
 Looking after the people we love was never supposed to feel like this.
 
