@@ -219,7 +219,88 @@
       border-radius: 4px;
       background: var(--navo-navy);
     }
+.navo-search-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--navo-navy);
+  cursor: pointer;
+}
 
+.navo-search-trigger:hover {
+  color: var(--navo-salmon);
+}
+
+.navo-search-panel {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  width: min(380px, calc(100% - 40px));
+  max-height: calc(100% - 100px);
+  overflow-y: auto;
+  z-index: 45;
+  background: #fff;
+  border: 1px solid #e9e5e1;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 15px 40px rgba(12,19,32,0.15);
+}
+
+.navo-search-panel[hidden] {
+  display: none !important;
+}
+
+.navo-search-panel label {
+  display: block;
+  color: var(--navo-salmon);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  margin-bottom: 14px;
+}
+
+#navo-search-input {
+  width: 100%;
+  border: 1px solid #dededb;
+  border-radius: 999px;
+  padding: 12px 16px;
+  font-size: 14px;
+  outline-offset: 3px;
+}
+
+#navo-search-results {
+  margin-top: 12px;
+}
+
+.navo-search-result {
+  display: block;
+  padding: 12px 4px;
+  border-bottom: 1px solid #efefec;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.navo-search-result:hover {
+  color: var(--navo-salmon);
+}
+
+.navo-search-empty {
+  color: var(--soft-ink);
+  font-size: 13px;
+  padding: 12px 0;
+}
+
+.navo-search-trigger:focus-visible,
+.navo-search-result:focus-visible {
+  outline: 3px solid var(--navo-salmon);
+  outline-offset: 3px;
+}
     /* INNER SCROLLING CONTENT */
 
     .navo-scroll-content {
@@ -742,6 +823,19 @@
         </a>
 
         <div class="navo-header-actions">
+<div class="navo-search">
+  <button type="button" class="navo-search-trigger"
+    aria-label="Search Journal" aria-expanded="false"
+    aria-controls="navo-search-panel">
+    <svg width="21" height="21" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round" stroke-linejoin="round"
+      aria-hidden="true">
+      <circle cx="10.8" cy="10.8" r="7.2"></circle>
+      <path d="m16 16 5 5"></path>
+    </svg>
+  </button>
+</div>
           <button
             type="button"
             class="navo-menu-trigger"
@@ -755,7 +849,17 @@
           </button>
         </div>
       </header>
-
+<!-- JOURNAL SEARCH PANEL -->
+<div class="navo-search-panel" id="navo-search-panel" hidden>
+  <label for="navo-search-input">SEARCH JOURNAL</label>
+  <input
+    id="navo-search-input"
+    type="search"
+    placeholder="Search stories and topics..."
+    autocomplete="off"
+  >
+  <div id="navo-search-results" aria-live="polite"></div>
+</div>
       <!-- EXPLORE MENU -->
 
       <div class="navo-menu-backdrop" hidden></div>
@@ -930,7 +1034,107 @@
         init();
       }
     })();
+/* NAVO JOURNAL SEARCH */
+(function () {
+  const trigger = document.querySelector(".navo-search-trigger");
+  const panel = document.getElementById("navo-search-panel");
+  const input = document.getElementById("navo-search-input");
+  const results = document.getElementById("navo-search-results");
 
+  if (!trigger || !panel || !input || !results) return;
+
+  let posts = [];
+  let loaded = false;
+
+  function message(text) {
+    results.textContent = "";
+    const p = document.createElement("p");
+    p.className = "navo-search-empty";
+    p.textContent = text;
+    results.appendChild(p);
+  }
+
+  async function loadPosts() {
+    if (loaded) return true;
+    try {
+      const response = await fetch("/search-index.json");
+      if (!response.ok) throw new Error("Search unavailable");
+      const data = await response.json();
+      if (!Array.isArray(data)) throw new Error("Invalid search index");
+      posts = data;
+      loaded = true;
+      return true;
+    } catch (error) {
+      message("Search is temporarily unavailable.");
+      return false;
+    }
+  }
+
+  function search() {
+    const query = input.value.trim().toLowerCase();
+    results.textContent = "";
+
+    if (!query) return;
+
+    const matches = posts.filter(post =>
+      [post.title, post.description, post.content,
+       ...(Array.isArray(post.tags) ? post.tags : [])]
+        .join(" ").toLowerCase().includes(query)
+    ).slice(0, 12);
+
+    if (!matches.length) {
+      message("No matching stories found.");
+      return;
+    }
+
+    matches.forEach(post => {
+      const a = document.createElement("a");
+      a.className = "navo-search-result";
+      a.href = post.url;
+      a.textContent = post.title;
+      results.appendChild(a);
+    });
+  }
+
+  function closeSearch() {
+    panel.hidden = true;
+    trigger.setAttribute("aria-expanded", "false");
+  }
+
+  trigger.addEventListener("click", async () => {
+    if (!panel.hidden) {
+      closeSearch();
+      trigger.focus();
+      return;
+    }
+
+    panel.hidden = false;
+    trigger.setAttribute("aria-expanded", "true");
+    input.focus();
+
+    if (!loaded) {
+      message("Loading stories...");
+      if (await loadPosts()) search();
+    }
+  });
+
+  input.addEventListener("input", search);
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && !panel.hidden) {
+      closeSearch();
+      trigger.focus();
+    }
+  });
+
+  document.addEventListener("click", event => {
+    if (!panel.hidden &&
+        !panel.contains(event.target) &&
+        !trigger.contains(event.target)) {
+      closeSearch();
+    }
+  });
+})();
     /* PRESERVE NETLIFY IDENTITY LOGIN */
 
     (function () {
