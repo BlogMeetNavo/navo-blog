@@ -1,46 +1,69 @@
 ---
 layout: base.njk
-title: The NAVO Blog
-description: Real stories, plain-English guides, and honest conversations about navigating aged care for your parents.
+title: NAVO Journal
+description: Honest conversations about what navigating care actually feels like.
 ---
 
 <section class="hero">
   <div class="hero-glow"></div>
   <div class="hero-inner">
-    <div class="hero-label">The NAVO Blog</div>
-    <h1 class="hero-h">Real stories.<br>Plain-English guides.</h1>
-    <p class="hero-sub">Honest conversations about what navigating aged care for your parents actually looks like. No overwhelm – just clarity.</p>
+    <div class="hero-label">JOURNAL</div>
+    <h1 class="hero-h">Real stories.</h1>
+    <p class="hero-sub">Honest conversations about what navigating care actually feels like.</p>
   </div>
 </section>
 
 <section class="posts-section">
   <div class="posts-inner">
     <div class="posts-label">Latest posts</div>
+
     {% if collections.posts.length %}
     <div class="posts-grid">
       {% for post in collections.posts | reverse %}
       <article class="post-card">
         {% if post.data.image %}
-        <img src="{{ post.data.image }}" alt="{{ post.data.title }}" class="post-card-img">
+        <img
+          src="{{ post.data.image }}"
+          alt="{{ post.data.title }}"
+          class="post-card-img"
+        >
         {% else %}
-        <div class="post-card-img-placeholder"><span>NAVO Blog</span></div>
+        <div class="post-card-img-placeholder">
+          <span>NAVO Journal</span>
+        </div>
         {% endif %}
+
         <div class="post-card-body">
           {% if post.data.tags %}
           <span class="post-tag">{{ post.data.tags[0] }}</span>
           {% endif %}
+
           <h2 class="post-card-title">{{ post.data.title }}</h2>
+
           <p class="post-card-excerpt">{{ post.data.description }}</p>
-          <div class="post-card-meta">{{ post.data.date | dateDisplay }} &nbsp;·&nbsp; {{ post.content | readTime }}</div>
-          <a href="{{ post.url }}" class="post-card-link">Read more →</a>
+
+          <div class="post-card-meta">
+            {{ post.data.date | dateDisplay }}
+            &nbsp;·&nbsp;
+            {{ post.content | readTime }}
+          </div>
+
+          <a href="{{ post.url }}" class="post-card-link">
+            Read more →
+          </a>
         </div>
       </article>
       {% endfor %}
     </div>
+
     {% else %}
-    <div style="text-align:center; padding: 4rem 0;">
-      <h3 style="font-size:1.2rem; font-weight:700; color:var(--ink); margin-bottom:0.75rem;">First post coming soon.</h3>
-      <p style="font-size:0.92rem; color:rgba(14,26,43,0.55); line-height:1.75;">Check back shortly – or stay connected and we'll let you know when new guides and stories are live.</p>
+    <div style="text-align:center; padding:4rem 0;">
+      <h3 style="font-size:1.2rem; font-weight:500; color:var(--ink); margin-bottom:0.75rem;">
+        First post coming soon.
+      </h3>
+      <p style="font-size:0.92rem; color:rgba(14,26,43,0.55); line-height:1.75;">
+        Check back shortly for new stories and conversations.
+      </p>
     </div>
     {% endif %}
   </div>
@@ -49,10 +72,14 @@ description: Real stories, plain-English guides, and honest conversations about 
 <section class="cta-strip">
   <div class="cta-strip-inner">
     <h2>Not sure where to start?</h2>
-    <p>Take the free 15-minute check-in and see exactly what you know, what's missing, and where to begin.</p>
+
     <div class="cta-actions">
-      <a href="https://tally.so/r/gDN0BP" target="_blank" rel="noopener" class="btn btn-s">Start the free check-in →</a>
-      <a href="https://shop.meetnavo.com" target="_blank" rel="noopener" class="btn btn-gw">See the guides</a>
+      <a
+        href="https://meetnavo.com/preview/my-navo/"
+        class="btn btn-s"
+      >
+        Take the tour →
+      </a>
     </div>
   </div>
 </section>

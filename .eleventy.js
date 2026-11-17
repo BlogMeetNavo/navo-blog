@@ -1,6 +1,8 @@
+
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/admin");
   eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/assets");
 
   eleventyConfig.addFilter("dateDisplay", function(date) {
     return new Date(date).toLocaleDateString("en-AU", {
