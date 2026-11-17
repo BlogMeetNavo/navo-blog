@@ -17,9 +17,6 @@
 
   <link rel="icon" type="image/png" href="/assets/favicon-navo.png">
   <link rel="apple-touch-icon" href="/assets/favicon-navo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
@@ -40,10 +37,89 @@
       --ink: #4d5155;
       --soft-ink: #777c80;
       --border: #e9e9e7;
+
+      --navo-navy: #0C1320;
+      --navo-salmon: #d45f49;
+      --navo-text: #0C1320;
+      --navo-frame-max: 1160px;
+      --navo-radius: 18px;
+      --navo-editorial-serif: Georgia, serif;
+    }
+
+    /* BR SEGMA - ACTUAL UPLOADED FONT FILES */
+
+    @font-face {
+      font-family: "BR Segma";
+      src: url("/assets/BRSegma-Light-BF654d990a3c0f6.otf") format("opentype");
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "BR Segma";
+      src: url("/assets/BRSegma-LightItalic-BF654d990a01834.otf") format("opentype");
+      font-weight: 300;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "BR Segma";
+      src: url("/assets/BRSegma-Regular-BF654d990a3279a.otf") format("opentype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "BR Segma";
+      src: url("/assets/BRSegma-RegularItalic-BF654d990a11f54.otf") format("opentype");
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "BR Segma";
+      src: url("/assets/BRSegma-Medium-BF654d9909e2529.otf") format("opentype");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "BR Segma";
+      src: url("/assets/BRSegma-MediumItalic-BF654d990a246aa.otf") format("opentype");
+      font-weight: 500;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "BR Segma";
+      src: url("/assets/BRSegma-SemiBold-BF654d990a3d889.otf") format("opentype");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "BR Segma";
+      src: url("/assets/BRSegma-SemiBoldItalic-BF654d990a21059.otf") format("opentype");
+      font-weight: 600;
+      font-style: italic;
+      font-display: swap;
     }
 
     *, *::before, *::after {
       box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
     }
 
     html {
@@ -51,11 +127,10 @@
     }
 
     body {
-      margin: 0;
-      padding: 0;
-      font-family: "BR Segma", "Instrument Sans", Arial, sans-serif;
-      background: #f4f0ec url("/assets/navo-background.png") center center / cover fixed no-repeat;
-      color: var(--ink);
+      font-family: "BR Segma", "Avenir Next", Arial, sans-serif;
+      font-weight: 400;
+      color: var(--navo-text);
+      background: #e4c5c8;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -67,159 +142,234 @@
       color: inherit;
     }
 
-    .navo-shell {
-      width: min(1440px, calc(100% - 48px));
-      min-height: calc(100vh - 48px);
-      margin: 24px auto;
-      background: #fff;
-      border-radius: 22px;
-      box-shadow: 0 16px 65px rgba(45, 43, 40, 0.07);
-      overflow: hidden;
+    /* NAVO MASTER WINDOW */
+
+    .navo-viewport {
+      height: 100vh;
+      height: 100dvh;
+      min-height: 0;
+      padding: 12px;
+      background: url("/assets/navo-background.png") center / cover no-repeat;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+    }
+
+    .navo-site {
+      width: min(100%, var(--navo-frame-max));
+      height: 100%;
+      min-height: 0;
       display: flex;
       flex-direction: column;
-    }
-
-    .nav {
       position: relative;
-      z-index: 400;
-      width: 100%;
-      min-height: 82px;
-      padding: 0 42px;
       background: #fff;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
+      border-radius: var(--navo-radius);
+      box-shadow: 0 22px 80px rgba(52,48,67,0.16);
+      overflow: hidden;
     }
 
-    .nav.scrolled {
-      background: #fff;
-    }
+    /* HEADER */
 
-    .nav-inner {
-      width: 100%;
+    .navo-topbar {
+      height: 72px;
+      flex: 0 0 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      padding: 0 30px;
+      background: #fff;
+      border-bottom: 1px solid #f0eeeb;
+      z-index: 30;
     }
 
-    .nav-logo {
+    .navo-brand {
       display: inline-flex;
       align-items: center;
       text-decoration: none;
-      flex-shrink: 0;
     }
 
-    .nav-logo img {
+    .navo-brand img {
+      width: 74px;
+      height: auto;
       display: block;
-      width: auto;
-      max-width: 160px;
-      height: 32px;
-      object-fit: contain;
     }
 
-    .nav-logo-fallback {
-      display: none;
-      color: #909496;
-      font-size: 25px;
-      font-weight: 500;
-      letter-spacing: -0.045em;
-    }
-
-    .nav-label {
-      color: var(--salmon);
-      font-size: 12px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-weight: 500;
-    }
-
-    .nav-actions {
+    .navo-header-actions {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 14px;
     }
 
-    .nav-home {
-      color: #8b8e91;
-      text-decoration: none;
-      font-size: 13px;
-      transition: color 0.2s;
-    }
-
-    .nav-home:hover {
-      color: var(--salmon);
-    }
-
-    .burger {
-      display: inline-flex;
+    .navo-menu-trigger {
+      width: 40px;
+      height: 40px;
+      display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
       gap: 5px;
-      width: 42px;
-      height: 42px;
-      padding: 9px;
-      border: 1px solid #e8e8e6;
-      border-radius: 50%;
+      align-items: center;
+      border: 0;
       background: transparent;
       cursor: pointer;
     }
 
-    .burger span {
-      display: block;
-      width: 19px;
-      height: 1.5px;
-      background: #888d90;
-      border-radius: 2px;
+    .navo-menu-trigger span {
+      width: 25px;
+      height: 2.5px;
+      border-radius: 4px;
+      background: var(--navo-navy);
     }
 
-    .burger:hover {
-      border-color: var(--salmon);
+    /* INNER SCROLLING CONTENT */
+
+    .navo-scroll-content {
+      min-height: 0;
+      flex: 1 1 auto;
+      overflow-y: auto;
+      overflow-x: hidden;
+      overscroll-behavior-y: contain;
+      -webkit-overflow-scrolling: touch;
     }
 
-    .mob-nav {
-      display: none;
-      position: relative;
-      z-index: 399;
+    /* NAVO FOOTER */
+
+    .navo-footer {
+      flex: 0 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 14px 25px;
+      color: #737985;
+      font-size: 12px;
       background: #fff;
-      border-bottom: 1px solid var(--border);
-      padding: 22px 42px 30px;
+      border-top: 1px solid #eee;
     }
 
-    .mob-nav.open {
-      display: block;
+    .navo-footer-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
-    .mob-nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0 40px;
-    }
-
-    .mob-nav a {
-      display: block;
-      padding: 13px 0;
-      border-bottom: 1px solid #f0f0ee;
-      color: #676b6e;
+    .navo-footer a {
       text-decoration: none;
-      font-size: 14px;
     }
 
-    .mob-nav a:hover,
-    .mob-nav a[aria-current="page"] {
-      color: var(--salmon);
+    .navo-footer a:hover {
+      text-decoration: underline;
     }
 
-    .navo-main {
-      flex: 1;
-      min-width: 0;
+    /* EXPLORE MENU */
+
+    .navo-menu-backdrop {
+      position: absolute;
+      inset: 72px 0 0;
+      background: rgba(12,19,32,0.42);
+      z-index: 35;
     }
 
-    /* Existing Journal components retained */
+    .navo-explore-menu {
+      position: absolute;
+      right: 16px;
+      top: 80px;
+      width: min(400px, calc(100% - 32px));
+      max-height: calc(100% - 96px);
+      overflow-y: auto;
+      z-index: 40;
+      background: white;
+      border: 1px solid #e7dfd8;
+      border-radius: 22px;
+      box-shadow: 0 20px 50px rgba(12,19,32,0.2);
+      padding: 25px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .navo-explore-menu[hidden],
+    .navo-menu-backdrop[hidden] {
+      display: none !important;
+    }
+
+    .navo-menu-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--navo-salmon);
+      letter-spacing: 0.13em;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .navo-menu-close {
+      border: 0;
+      background: none;
+      color: var(--navo-navy);
+      font-size: 30px;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0 3px;
+    }
+
+    .navo-menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .navo-menu-links a {
+      font-size: 15px;
+      font-weight: 400;
+      text-decoration: none;
+      padding: 9px 0;
+      line-height: 1.3;
+      color: var(--navo-navy);
+    }
+
+    .navo-menu-links a:hover {
+      color: var(--navo-salmon);
+    }
+
+    .navo-menu-links a.navo-current {
+      color: var(--navo-salmon);
+      font-weight: 500;
+    }
+
+    .navo-menu-divider {
+      height: 1px;
+      background: #e9e5e1;
+      margin: 3px 0;
+    }
+
+    .navo-sign-in {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--navo-navy);
+      color: white;
+      text-decoration: none;
+      padding: 13px 26px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .navo-sign-in:hover {
+      opacity: 0.9;
+    }
+
+    .navo-menu-trigger:focus-visible,
+    .navo-menu-close:focus-visible,
+    .navo-explore-menu a:focus-visible {
+      outline: 3px solid var(--navo-salmon);
+      outline-offset: 3px;
+    }
+
+    /* JOURNAL CONTENT STYLES */
 
     .btn {
       display: inline-flex;
@@ -485,55 +635,7 @@
       gap: 14px;
     }
 
-    /* NAVO footer */
-
-    .navo-footer {
-      padding: 26px 42px;
-      background: #fff;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-inner {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    .footer-l {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-
-    .footer-loc {
-      font-size: 11px;
-      color: #9b9d9f;
-    }
-
-    .footer-r {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    .footer-r a,
-    .footer-r span {
-      font-size: 11px;
-      color: #929597;
-      text-decoration: none;
-    }
-
-    .footer-r a:hover {
-      color: var(--salmon);
-    }
-
-    .footer-sep {
-      color: #dededb !important;
-    }
+    /* RESPONSIVE */
 
     @media (max-width: 900px) {
       .posts-grid {
@@ -541,49 +643,52 @@
       }
     }
 
-    @media (max-width: 680px) {
-      body {
-        background-attachment: scroll;
+    @media (max-width: 700px) {
+      .navo-viewport {
+        padding: 9px;
       }
 
-      .navo-shell {
-        width: calc(100% - 20px);
-        min-height: calc(100vh - 20px);
-        margin: 10px auto;
+      .navo-site {
         border-radius: 16px;
       }
 
-      .nav {
-        min-height: 68px;
-        padding: 0 20px;
+      .navo-topbar {
+        height: 64px;
+        flex-basis: 64px;
+        padding: 0 16px;
       }
 
-      .nav-logo img {
-        max-width: 130px;
-        height: 28px;
+      .navo-brand img {
+        width: 68px;
       }
 
-      .nav-label {
-        display: none;
+      .navo-menu-backdrop {
+        inset: 64px 0 0;
       }
 
-      .nav-actions {
-        gap: 12px;
+      .navo-explore-menu {
+        top: 70px;
+        left: 12px;
+        right: 12px;
+        width: auto;
+        max-height: calc(100% - 82px);
+        padding: 20px 22px;
       }
 
-      .nav-home {
-        display: none;
+      .navo-footer {
+        font-size: 10px;
+        padding: 10px 13px;
+        justify-content: center;
+        text-align: center;
       }
 
-      .mob-nav {
-        padding: 15px 22px 24px;
+      .navo-footer-links {
+        justify-content: center;
+        gap: 8px 13px;
       }
+    }
 
-      .mob-nav ul {
-        grid-template-columns: 1fr;
-        gap: 0;
-      }
-
+    @media (max-width: 680px) {
       .hero {
         padding: 70px 22px 65px;
       }
@@ -607,19 +712,6 @@
       .cta-strip {
         padding: 55px 22px;
       }
-
-      .navo-footer {
-        padding: 26px 22px;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .footer-r {
-        gap: 12px;
-      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -628,36 +720,32 @@
         transition-duration: 0.01ms !important;
       }
     }
+
   </style>
 </head>
 
 <body>
 
-  <div class="navo-shell">
+  <div class="navo-viewport">
+    <div class="navo-site">
 
-    <header class="nav" id="nav">
-      <div class="nav-inner">
+      <!-- NAVO MASTER HEADER -->
 
-        <a href="https://meetnavo.com" class="nav-logo" aria-label="Meet NAVO home">
-          <img
-            src="/assets/navo-logo.png"
-            alt="NAVO"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='inline';"
-          >
-          <span class="nav-logo-fallback">NAVO</span>
+      <header class="navo-topbar">
+        <a
+          class="navo-brand"
+          href="https://meetnavo.com/"
+          aria-label="Meet NAVO"
+        >
+          <img src="/assets/navo-logo.png" alt="NAVO">
         </a>
 
-        <div class="nav-actions">
-          <span class="nav-label">Journal</span>
-
-          <a href="https://meetnavo.com" class="nav-home">Meet NAVO</a>
-
+        <div class="navo-header-actions">
           <button
-            class="burger"
-            id="burger"
             type="button"
-            aria-label="Explore NAVO"
-            aria-controls="mobNav"
+            class="navo-menu-trigger"
+            aria-label="Open Explore menu"
+            aria-controls="navo-explore-menu"
             aria-expanded="false"
           >
             <span></span>
@@ -665,73 +753,186 @@
             <span></span>
           </button>
         </div>
+      </header>
 
-      </div>
-    </header>
+      <!-- EXPLORE MENU -->
 
-    <nav class="mob-nav" id="mobNav" aria-label="Explore NAVO">
-      <ul>
-        <li><a href="https://meetnavo.com">Meet NAVO</a></li>
-        <li><a href="https://blog.meetnavo.com" aria-current="page">Journal</a></li>
-        <li><a href="https://listen.meetnavo.com">Listen</a></li>
-        <li><a href="https://shop.meetnavo.com">Shop</a></li>
-        <li><a href="https://research.meetnavo.com">Research</a></li>
-        <li><a href="https://meetnavo.com/get-involved">Get Involved</a></li>
-        <li><a href="https://app.meetnavo.com">My NAVO</a></li>
-      </ul>
-    </nav>
+      <div class="navo-menu-backdrop" hidden></div>
 
-    <main class="navo-main" id="main-content">
-      {{ content | safe }}
-    </main>
-
-    <footer class="navo-footer">
-      <div class="footer-inner">
-
-        <div class="footer-l">
-          <span class="footer-loc">NAVO Care Pty Ltd</span>
-          <span class="footer-loc">A RE:HUMAN™ PRODUCT</span>
+      <nav
+        id="navo-explore-menu"
+        class="navo-explore-menu"
+        aria-label="Explore NAVO"
+        hidden
+      >
+        <div class="navo-menu-head">
+          <span>EXPLORE</span>
+          <button
+            type="button"
+            class="navo-menu-close"
+            aria-label="Close Explore menu"
+          >×</button>
         </div>
 
-        <div class="footer-r">
-          <a href="https://meetnavo.com">Meet NAVO</a>
-          <span class="footer-sep">·</span>
+        <div class="navo-menu-links">
+          <a href="https://meetnavo.com/">Meet NAVO</a>
+          <a href="https://meetnavo.com/preview/my-navo/">Take a quick tour</a>
+          <a
+            href="https://blog.meetnavo.com/"
+            class="navo-current"
+            aria-current="page"
+          >Journal</a>
+          <a href="https://listen.meetnavo.com/">Listen</a>
+          <a href="https://shop.meetnavo.com/">Shop</a>
+          <a href="https://meetnavo.com/faq">FAQ</a>
+        </div>
+
+        <div class="navo-menu-divider"></div>
+
+        <a
+          class="navo-sign-in"
+          href="https://app.meetnavo.com/signin"
+        >Sign In</a>
+      </nav>
+
+      <!-- JOURNAL CONTENT -->
+
+      <main
+        class="navo-scroll-content navo-main"
+        id="main-content"
+      >
+        {{ content | safe }}
+      </main>
+
+      <!-- NAVO MASTER FOOTER -->
+
+      <footer class="navo-footer">
+        <span>
+          NAVO Care Pty Ltd. ACN 697 641 517
+          Brisbane, Queensland, Australia.
+        </span>
+
+        <div class="navo-footer-links">
+          <a href="https://meetnavo.com/">Home</a>
+          <a href="https://meetnavo.com/about">About</a>
+          <a href="https://research.meetnavo.com/">Research</a>
+          <a href="https://meetnavo.com/about#partners">Partners</a>
           <a href="https://meetnavo.com/privacy">Privacy</a>
-          <span class="footer-sep">·</span>
-          <a href="https://meetnavo.com/get-involved">Get Involved</a>
+          <a href="https://meetnavo.com/terms">Terms</a>
+          <a href="https://meetnavo.com/contact">Contact</a>
+          <a href="https://www.rehuman.ing/">A RE:HUMAN™ Product</a>
         </div>
+      </footer>
 
-      </div>
-    </footer>
-
+    </div>
   </div>
 
   <script>
-    (function () {
-      const burger = document.getElementById("burger");
-      const menu = document.getElementById("mobNav");
+    /* NAVO EXPLORE MENU */
 
-      if (burger && menu) {
-        burger.addEventListener("click", function () {
-          const isOpen = menu.classList.toggle("open");
-          burger.setAttribute("aria-expanded", String(isOpen));
+    (function () {
+      function init() {
+        const trigger = document.querySelector(".navo-menu-trigger");
+        const menu = document.getElementById("navo-explore-menu");
+        const close = menu
+          ? menu.querySelector(".navo-menu-close")
+          : null;
+        const backdrop = document.querySelector(".navo-menu-backdrop");
+
+        if (!trigger || !menu || !close || !backdrop) {
+          return;
+        }
+
+        function setOpen(open) {
+          menu.hidden = !open;
+          backdrop.hidden = !open;
+
+          trigger.setAttribute(
+            "aria-expanded",
+            String(open)
+          );
+
+          trigger.setAttribute(
+            "aria-label",
+            open ? "Close Explore menu" : "Open Explore menu"
+          );
+
+          if (open) {
+            close.focus();
+          } else if (menu.contains(document.activeElement)) {
+            trigger.focus();
+          }
+        }
+
+        trigger.addEventListener("click", function () {
+          setOpen(menu.hidden);
+        });
+
+        close.addEventListener("click", function () {
+          setOpen(false);
+        });
+
+        backdrop.addEventListener("click", function () {
+          setOpen(false);
+        });
+
+        menu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            setOpen(false);
+          });
         });
 
         document.addEventListener("keydown", function (event) {
-          if (event.key === "Escape") {
-            menu.classList.remove("open");
-            burger.setAttribute("aria-expanded", "false");
+          if (menu.hidden) {
+            return;
           }
-        });
 
-        document.addEventListener("click", function (event) {
-          if (!menu.contains(event.target) && !burger.contains(event.target)) {
-            menu.classList.remove("open");
-            burger.setAttribute("aria-expanded", "false");
+          if (event.key === "Escape") {
+            setOpen(false);
+            return;
+          }
+
+          if (event.key === "Tab") {
+            const elements = Array.from(
+              menu.querySelectorAll("button, a[href]")
+            ).filter(function (element) {
+              return !element.disabled;
+            });
+
+            if (!elements.length) {
+              return;
+            }
+
+            const first = elements[0];
+            const last = elements[elements.length - 1];
+
+            if (
+              event.shiftKey &&
+              document.activeElement === first
+            ) {
+              event.preventDefault();
+              last.focus();
+            } else if (
+              !event.shiftKey &&
+              document.activeElement === last
+            ) {
+              event.preventDefault();
+              first.focus();
+            }
           }
         });
       }
 
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+      } else {
+        init();
+      }
+    })();
+
+    /* PRESERVE NETLIFY IDENTITY LOGIN */
+
+    (function () {
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", function (user) {
           if (!user) {
@@ -746,5 +947,3 @@
 
 </body>
 </html>
-
-
