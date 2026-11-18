@@ -20,7 +20,7 @@ permalink: "/posts/{{ slug }}/"
   margin-bottom: 2rem;
   color: var(--salmon);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.9rem;
 }
 
@@ -32,11 +32,14 @@ permalink: "/posts/{{ slug }}/"
 }
 
 .post-title {
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  line-height: 1.1;
+  font-family: var(--font-heading);
+  font-variant-numeric: lining-nums;
+  font-weight: 400;
+  font-size: clamp(2.5rem, 5.6vw, 4.5rem);
+  line-height: 1.08;
   margin-bottom: 1rem;
   color: var(--ink);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
 }
 
 .post-meta {
@@ -61,6 +64,9 @@ permalink: "/posts/{{ slug }}/"
 
 .post-body h2,
 .post-body h3 {
+  font-family: var(--font-heading);
+  font-variant-numeric: lining-nums;
+  font-weight: 500;
   color: var(--ink);
   margin: 2.5rem 0 1rem;
   line-height: 1.25;
@@ -100,6 +106,7 @@ permalink: "/posts/{{ slug }}/"
 }
 
 .post-cta h3 {
+  font-weight: 500;
   font-size: 1.2rem;
   line-height: 1.4;
   margin-bottom: 0.5rem;
